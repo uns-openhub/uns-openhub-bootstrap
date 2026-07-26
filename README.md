@@ -12,8 +12,7 @@ private configuration.
 
 ## Install
 
-Release assets will become available with the next UNS DataHub runtime
-version. Once a release is published, macOS and Linux users can run:
+macOS and Linux:
 
 ```sh
 curl -fsSL \
@@ -42,6 +41,10 @@ Use a fine-grained, expiring token restricted to the private runtime
 repository with read-only **Contents** permission. For unattended hosts,
 provide `UNS_GITHUB_TOKEN` through the host's secret mechanism rather than a
 command-line argument.
+
+Docker or Podman with Compose is required to run the Runtime. Complete
+installation, configuration, startup, and operating instructions are in the
+Runtime `README.md` included with the downloaded bundle.
 
 Docker or Podman registry authentication is separate from GitHub runtime
 access.
