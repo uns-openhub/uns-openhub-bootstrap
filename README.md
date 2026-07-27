@@ -52,6 +52,21 @@ The permanent documentation entry point is
 Docker or Podman registry authentication is separate from GitHub runtime
 access.
 
+## Existing Runtime directory
+
+Re-running `uns-bootstrap install` safely reuses the target when it contains
+the same verified Runtime version and resumes the setup wizard. If the target
+contains a different Runtime version or cannot be verified, the bootstrap
+stops with `runtime target must be absent or empty` before changing local
+files.
+
+Do not delete or overwrite `.env`, `.secrets`, configuration, or other local
+state to bypass this check. Compare the installed `VERSION` file with
+`uns-bootstrap version`, then either install to another empty directory with
+`--dir` or move the current Runtime to a unique versioned backup before
+installing again. See [Resolve an existing Runtime target](https://www.uns-datahub.com/docs/#troubleshooting)
+for safe macOS, Linux, and Windows commands.
+
 ## Offline installation
 
 Transfer the private runtime archive together with its sibling `.sha256` file,
