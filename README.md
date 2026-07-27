@@ -4,12 +4,6 @@ This public repository distributes the minimal `uns-bootstrap` installers and
 cross-platform binaries used to acquire a version-matched UNS DataHub runtime.
 The complete runtime release may remain private.
 
-The bootstrap source is maintained in the private
-`uns-datahub/uns-datahub-tools` repository. This repository intentionally
-contains only public distribution documentation and immutable GitHub Release
-assets. It contains no runtime payloads, controller source, credentials, or
-private configuration.
-
 ## Install
 
 macOS and Linux:
