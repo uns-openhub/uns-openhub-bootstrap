@@ -52,20 +52,35 @@ The permanent documentation entry point is
 Docker or Podman registry authentication is separate from GitHub runtime
 access.
 
+## Bootstrap and Runtime versions
+
+The bootstrap and Runtime use independent version lines. `uns-bootstrap
+version` prints both the bootstrap version and the default Runtime release
+embedded in that bootstrap build. A bootstrap `1.x` version and a Runtime `7.x`
+version are therefore expected and should not be compared with each other.
+
+Re-run the public platform installer from the Install section to refresh an
+older bootstrap binary. This replaces only `uns-bootstrap`; it does not replace
+an existing Runtime directory.
+
 ## Existing Runtime directory
 
 Re-running `uns-bootstrap install` safely reuses the target when it contains
-the same verified Runtime version and resumes the setup wizard. If the target
-contains a different Runtime version or cannot be verified, the bootstrap
-stops with `runtime target must be absent or empty` before changing local
-files.
+the same verified Runtime version and resumes the setup wizard. Current
+releases report the installed and requested Runtime versions when possible if
+the target contains a different or unverifiable Runtime. They then print safe
+commands for a side-by-side installation or a rename-and-retry without changing
+local files.
+
+Older bootstrap releases may print only `runtime target must be absent or
+empty`. Refresh the bootstrap binary, then retry the installation to receive
+the more specific guidance.
 
 Do not delete or overwrite `.env`, `.secrets`, configuration, or other local
-state to bypass this check. Compare the installed `VERSION` file with
-`uns-bootstrap version`, then either install to another empty directory with
-`--dir` or move the current Runtime to a unique versioned backup before
-installing again. See [Resolve an existing Runtime target](https://www.uns-datahub.com/docs/#troubleshooting)
-for safe macOS, Linux, and Windows commands.
+state to bypass this check. Compare the installed Runtime `VERSION` file with
+the `default runtime` value printed by `uns-bootstrap version`, not with the
+bootstrap's own version. See [Existing Runtime](https://www.uns-datahub.com/docs/#existing-runtime)
+for the cross-platform check.
 
 ## Offline installation
 
