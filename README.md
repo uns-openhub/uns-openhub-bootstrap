@@ -46,6 +46,9 @@ Docker or Podman with Compose is required to run the Runtime. Complete
 installation, configuration, startup, and operating instructions are in the
 Runtime `README.md` included with the downloaded bundle.
 
+The permanent documentation entry point is
+[www.uns-datahub.com/docs/](https://www.uns-datahub.com/docs/).
+
 Docker or Podman registry authentication is separate from GitHub runtime
 access.
 
