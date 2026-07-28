@@ -10,7 +10,7 @@ macOS and Linux:
 
 ```sh
 curl -fsSL \
-  https://github.com/uns-datahub/uns-datahub-bootstrap/releases/latest/download/install.sh |
+  https://github.com/uns-openhub/uns-openhub-bootstrap/releases/latest/download/install.sh |
   sh
 
 "$HOME/.local/bin/uns-bootstrap" install
@@ -20,7 +20,7 @@ Windows PowerShell:
 
 ```powershell
 Invoke-WebRequest `
-  https://github.com/uns-datahub/uns-datahub-bootstrap/releases/latest/download/install.ps1 `
+  https://github.com/uns-openhub/uns-openhub-bootstrap/releases/latest/download/install.ps1 `
   -OutFile install.ps1
 .\install.ps1
 & "$HOME\.local\bin\uns-bootstrap.exe" install
@@ -41,7 +41,7 @@ installation, configuration, startup, and operating instructions are in the
 Runtime `README.md` included with the downloaded bundle.
 
 The permanent documentation entry point is
-[www.uns-datahub.com/docs/](https://www.uns-datahub.com/docs/).
+[www.uns-openhub.com/docs/](https://www.uns-openhub.com/docs/).
 
 Docker or Podman registry authentication is separate from GitHub runtime
 access.
@@ -73,7 +73,7 @@ the more specific guidance.
 Do not delete or overwrite `.env`, `.secrets`, configuration, or other local
 state to bypass this check. Compare the installed Runtime `VERSION` file with
 the `default runtime` value printed by `uns-bootstrap version`, not with the
-bootstrap's own version. See [Existing Runtime](https://www.uns-datahub.com/docs/#existing-runtime)
+bootstrap's own version. See [Existing Runtime](https://www.uns-openhub.com/docs/#existing-runtime)
 for the cross-platform check.
 
 ## Offline installation
