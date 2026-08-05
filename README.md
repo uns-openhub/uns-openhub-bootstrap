@@ -1,7 +1,7 @@
-# UNS DataHub Bootstrap
+# UNS OpenHub Bootstrap
 
 This public repository distributes the minimal `uns-bootstrap` installers and
-cross-platform binaries used to acquire a version-matched UNS DataHub runtime.
+cross-platform binaries used to acquire a version-matched UNS OpenHub Runtime.
 The complete runtime release may remain private.
 
 ## Install
